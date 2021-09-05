@@ -1,7 +1,6 @@
 {
-  "name": "react-slide-show",
-  "version": "0.1.0",
-  "private": true,
+  "name": "react-chakra-slide-show",
+  "version": "1.0.0",
   "dependencies": {
     "@chakra-ui/react": "^1.6.7",
     "@emotion/react": "^11.4.1",
