@@ -17,11 +17,10 @@ npm i react-chakra-slide-show
 
 ```js
 import { ChakraProvider } from '@chakra-ui/react'
+import { ImageSlide } from 'react-chakra-slide-show'
 import React, { useMemo } from 'react'
-import ImageSlide from './ImageSlide'
 
 const App = () => {
-
   const images = useMemo(() => [
     'image1.jpg',
     'image2.jpg',
