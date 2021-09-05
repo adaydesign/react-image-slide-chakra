@@ -1,6 +1,6 @@
 {
   "name": "react-chakra-slide-show",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "React component for image slide",
   "keywords": [
     "react",
@@ -9,11 +9,22 @@
     "chakra ui",
     "image"
   ],
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "sideEffects": false,
   "author": "Chalermchon Samana <aday.3ddesign@gmail.com>",
   "homepage": "http://www.appcodemia.com",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adaydesign/react-image-slide-chakra"
+  },
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@chakra-ui/react": "^1.6.7",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
@@ -28,7 +39,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "react-build": "react-scripts build",
+    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -51,7 +63,10 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
     "@babel/plugin-syntax-jsx": "^7.14.5",
+    "@babel/preset-env": "^7.15.4",
     "@babel/preset-react": "^7.14.5"
   }
 }

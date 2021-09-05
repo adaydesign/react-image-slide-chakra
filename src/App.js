@@ -1,6 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import React, { useMemo } from 'react'
-import ImageSlide from './ImageSlide'
+import { ImageSlide } from './lib'
 
 const App = () => {
 
