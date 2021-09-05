@@ -1,14 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import ImageSlide from './ImageSlide';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import ImageSlide from "./ImageSlide";
 
 export { ImageSlide }
-
