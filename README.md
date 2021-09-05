@@ -7,7 +7,7 @@
 npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
 ```
 
-## Example
+## Example Code
 
 ```js
 import { ChakraProvider } from '@chakra-ui/react'
@@ -41,4 +41,6 @@ export default App
 ```
 
 ## Demo
+
+https://appcodemia-react-slide.netlify.app
 

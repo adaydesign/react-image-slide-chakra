@@ -23,26 +23,30 @@ const ImageSlideController = ({ auto }) => {
         })
     }
 
+    var interval = null
     const autoSlide = useRef()
     autoSlide.current = () => {
-        const interval = setInterval(() => {
-            setSlide(prev => {
-                return {
-                    ...prev,
-                    index: prev.index + 1 >= prev.images.length ? 0 : prev.index + 1
-                }
-            })
-        }, auto)
-        return () => clearInterval(interval)
+        if (auto > 0) {
+            interval = setInterval(() => {
+                setSlide(prev => {
+                    return {
+                        ...prev,
+                        index: prev.index + 1 >= prev.images.length ? 0 : prev.index + 1
+                    }
+                })
+            }, auto)
+
+        }
     }
     useEffect(() => {
-        if (auto > 0) autoSlide.current()
-    }, [])
+        autoSlide.current()
+        return () => clearInterval(interval)
+    }, [interval])
 
     return (
         <HStack mt={4} w="full" justify="center">
             {slide?.images && slide?.images.map((img, index) =>
-                <Button onClick={() => changeSlide(index)} colorScheme={slide?.index === index ? "blue" : "gray"} key={`button_${img}`}>
+                <Button onClick={() => changeSlide(index)} colorScheme={slide?.index === index ? "blue" : "gray"} borderRadius="full" size="sm" key={`button_${img}`}>
                     {index + 1}
                 </Button>)}
         </HStack>
