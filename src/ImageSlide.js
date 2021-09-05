@@ -36,7 +36,7 @@ const ImageSlideController = ({ auto }) => {
         return () => clearInterval(interval)
     }
     useEffect(() => {
-        autoSlide.current()
+        if (auto > 0) autoSlide.current()
     }, [])
 
     return (
@@ -78,7 +78,7 @@ const CaptionDisplay = () => {
     )
 }
 
-const ImageSlide = ({ images, captions }) => {
+const ImageSlide = ({ images, captions, auto = 5000 }) => {
     const [slide, setSlide] = useState({ ...defaultValues, images: images, captions: captions })
 
     return (
@@ -86,7 +86,7 @@ const ImageSlide = ({ images, captions }) => {
             <Flex w="full" direction="column">
                 <ImageDisplay minH="500px" />
                 <CaptionDisplay />
-                <ImageSlideController auto={7000} />
+                <ImageSlideController auto={auto} />
             </Flex>
         </ImageSlideContext.Provider>
     )
