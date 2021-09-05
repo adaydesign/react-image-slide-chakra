@@ -1,3 +1,3 @@
-import ImageSlide from "./src/ImageSlide";
+import ImageSlide from "./dist/ImageSlide"
 
 export { ImageSlide }
