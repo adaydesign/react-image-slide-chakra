@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { ChakraProvider } from '@chakra-ui/react'
+import React, { useMemo } from 'react'
+import ImageSlide from './ImageSlide'
 
-function App() {
+const App = () => {
+
+  const images = useMemo(() => [
+    'image1.jpg',
+    'image2.jpg',
+    'image3.jpg',
+    'image4.jpg'
+  ], [])
+
+  const captions = useMemo(() => [
+    'caption for image1.jpg',
+    'caption for image2.jpg',
+    'caption for image3.jpg',
+    'caption for image4.jpg'
+  ], [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ChakraProvider>
+      <ImageSlide images={images} captions={captions} />
+    </ChakraProvider>
+  )
 }
 
-export default App;
+export default App
+
