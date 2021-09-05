@@ -2,9 +2,15 @@
 
 - with Chakra UI
 
-## Install
+## 1. Install React and Chakra UI (v.1.6.7)
 ```
+npx create-react-app my-app
 npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4
+```
+
+## 2. Install This Package
+```
+npm i react-chakra-slide-show
 ```
 
 ## Example Code

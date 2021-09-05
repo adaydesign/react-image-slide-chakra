@@ -82,13 +82,13 @@ const CaptionDisplay = () => {
     )
 }
 
-const ImageSlide = ({ images, captions, auto = 5000 }) => {
+const ImageSlide = ({ images, captions, auto = 5000, minH = "500px" }) => {
     const [slide, setSlide] = useState({ ...defaultValues, images: images, captions: captions })
 
     return (
         <ImageSlideContext.Provider value={[slide, setSlide]}>
             <Flex w="full" direction="column">
-                <ImageDisplay minH="500px" />
+                <ImageDisplay minH={minH} />
                 <CaptionDisplay />
                 <ImageSlideController auto={auto} />
             </Flex>
