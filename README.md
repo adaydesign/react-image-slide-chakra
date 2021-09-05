@@ -1,6 +1,7 @@
 # React Image Slide Example
 
 - with Chakra UI
+- npm : https://www.npmjs.com/package/react-chakra-slide-show
 
 ## 1. Install React and Chakra UI (v.1.6.7)
 ```
