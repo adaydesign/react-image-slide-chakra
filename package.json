@@ -1,6 +1,6 @@
 {
   "name": "react-chakra-slide-show",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "React component for image slide",
   "keywords": [
     "react",
@@ -15,7 +15,6 @@
     "dist",
     "README.md"
   ],
-  "sideEffects": false,
   "author": "Chalermchon Samana <aday.3ddesign@gmail.com>",
   "homepage": "http://www.appcodemia.com",
   "license": "MIT",
