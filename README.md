@@ -46,6 +46,17 @@ const App = () => {
 export default App
 ```
 
+## API
+
+ImageSlide's properties
+
+|Property|Type|M/O|Default|Description|
+|---|---|---|---|---|
+|images|string array|required||list of image path|
+|captions|string array|required||list of image's caption|
+|auto|int|optional|default: 5000|delay time, if 0 is not automatic change image|
+|minH|string|optional|default: "500px"|image's height|
+
 ## Demo
 
 https://appcodemia-react-slide.netlify.app
